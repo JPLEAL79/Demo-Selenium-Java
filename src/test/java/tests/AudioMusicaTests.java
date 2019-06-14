@@ -33,7 +33,7 @@ public class AudioMusicaTests extends BaseTests{
         Assert.assertTrue(agregarPage.stockDisponible());
 
         agregarPage.agregarArticuloAlCarritoDeCompras();
-        //Assert.assertTrue(agregarPage.seAgregoAlCarrito());
+        //Assert.assertTrue(agregarPage.seAgregoAlCarrito());   //Este validador esta pendiente. Retorna false!
 
     }
 }

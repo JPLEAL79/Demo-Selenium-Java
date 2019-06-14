@@ -12,13 +12,13 @@ public class AgregarPage {
     private WebDriver driver;
     WebDriverWait wait;
 
-    @FindBy(xpath = "//a [@class='product-item-link' ][contains (text(), 'Piano Digital PX-870, color negro')]")
+    @FindBy(xpath = "//a[@class='product-item-link'][contains(text(),' Piano digital PX-160, color negro, sin fuente de poder')]")
     private WebElement clickEnArticulo;
-    @FindBy(xpath = "//div[@class='value'][contains (text(),'1105901')]")
+    @FindBy(css = "span[data-ui-id]")
     private WebElement articuloVisible;
     @FindBy(linkText = "Ver Stock en Tiendas")
     private WebElement linkVerStock;
-    @FindBy(xpath = "//*[contains(text(),'Este producto está disponible en las siguientes tiendas:')]")
+    @FindBy(xpath = "//*[@class='block-title'] [contains (text() , 'Stock solamente referencial, favor revisar previamente con tiendas.')]")
     private WebElement tiendasDeStock;
     @FindBy(xpath = "//a[@class='fancybox-item fancybox-close']")
     private WebElement clickCerrarMsjDeStock;
@@ -26,8 +26,7 @@ public class AgregarPage {
     private WebElement cajaDeTexto;
     @FindBy(xpath = "//button[@id='product-addtocart-button']")
     private WebElement buttonAgregar;
-    @FindBy(xpath = "//div[@id='modal-content-24']")
-    private WebElement msjSeAgregoAlCarrito;
+
     @FindBy(xpath = "//div[@class='modals-wrapper']/aside[3]//button[@class='action-close']")
     private WebElement cerrarMsjDeArticuloAgregado;
 
@@ -67,7 +66,7 @@ public class AgregarPage {
     }
 
     public boolean seAgregoAlCarrito() {
-        return msjSeAgregoAlCarrito.isDisplayed();
+        return cerrarMsjDeArticuloAgregado.isDisplayed();
     }
 }
 
