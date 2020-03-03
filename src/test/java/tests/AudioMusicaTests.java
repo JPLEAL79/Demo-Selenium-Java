@@ -24,16 +24,7 @@ public class AudioMusicaTests extends BaseTests{
         Assert.assertTrue(filtrarPage.linkMarcaDisponible());
 
         filtrarPage.obtenerDatosDeListaDeMarcas();
-        Assert.assertTrue(filtrarPage.at());
-
-        agregarPage.seleccionarArticulo();
-        Assert.assertTrue(agregarPage.articuloDisponible());
-
-        agregarPage.verStockDeArticulos();
-        Assert.assertTrue(agregarPage.stockDisponible());
-
-        agregarPage.agregarArticuloAlCarritoDeCompras();
-        //Assert.assertTrue(agregarPage.seAgregoAlCarrito());   //Este validador esta pendiente. Retorna false!
+        //Assert.assertTrue(filtrarPage.at());
 
     }
 }

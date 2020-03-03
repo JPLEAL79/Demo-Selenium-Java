@@ -13,9 +13,9 @@ public class FiltrarPage {
     WebDriver driver;
     private WebDriverWait wait;
 
-    @FindBy(xpath = "//span[@class='label'][contains(text(),'Marcas')]")
+    @FindBy(xpath = "//div[@id='narrow-by-list']/div[2]")
     private WebElement linkMarca;
-    @FindBy(xpath = "//form[@data-amshopby-filter='attr_category_ids']/li[@data-label = 'Marcas']/ul/li")
+    @FindBy(xpath = "//*[@data-amshopby-filter='attr_manufacturer']/li")
     private List<WebElement> listaDeMarcas;
 
     @FindBy(xpath = "//li[@class='item am-shopby-item']")
@@ -34,18 +34,12 @@ public class FiltrarPage {
 
     public void obtenerDatosDeListaDeMarcas() {
         String nombreMarca = "";
-        for (WebElement marca : listaDeMarcas) {
-            nombreMarca = marca.getAttribute("data-label");
-            if (marca.getAttribute("data-label").contains("Casio")) {
-                marca.click();
-                break;
-            }
-            System.out.println(nombreMarca);
-        }
-    }
 
-    public boolean at() {
-        return resultado.isDisplayed();
+        for (WebElement marca : listaDeMarcas) {
+            nombreMarca = marca.getText();
+            System.out.println(nombreMarca);
+
+        }
     }
 
     public boolean linkMarcaDisponible() {

@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
@@ -19,11 +18,10 @@ public class HomePage {
 
 
     public HomePage(WebDriver driver) {
-        //wait = new WebDriverWait(driver, 15);
+        wait = new WebDriverWait(driver, 15);
         this.driver = driver;
-       // PageFactory.initElements(this.driver, this);
-        AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,100);
-        PageFactory.initElements(factory, this);
+        PageFactory.initElements(this.driver, this);
+        PageFactory.initElements(this.driver, this);
 
     }
 

@@ -2,8 +2,8 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
-import pages.AgregarPage;
 import pages.FiltrarPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -17,13 +17,18 @@ public class BaseTests {
     public HomePage homePage;
     public LoginPage loginPage;
     public FiltrarPage filtrarPage;
-    public AgregarPage agregarPage;
 
 
     @BeforeMethod
     public void beforeMetohd() {
-        String path = Paths.get(System.getProperty("user.dir"), "src/test/resources/webdrivers/chromedriver.exe").toString();
-        System.setProperty("webdriver.chrome.driver", path);
+
+        ChromeOptions opts = new ChromeOptions();
+        opts.addArguments("--disable-notifications"); //Opción de Chrome sirve para desactivar las notificacion
+        opts.addArguments("--start-maximized"); //Opción de Chrome sirve para que inicie maximizado
+
+
+
+        System.setProperty("webdriver.chrome.driver", "./src/test/resources/webdrivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -32,7 +37,7 @@ public class BaseTests {
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
         filtrarPage = new FiltrarPage(driver);
-        agregarPage = new AgregarPage(driver);
+
     }
 
     @AfterSuite
