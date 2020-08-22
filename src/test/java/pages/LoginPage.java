@@ -14,7 +14,7 @@ public class LoginPage extends BaseTests {
 
     @FindBy(xpath = "//a[contains(text(),'Iniciar sesión')]")
     private WebElement clickIniciaSesion;
-    @FindBy(id = "email")
+    @FindBy(css = "input#email")
     private WebElement campoEmail;
     @FindBy(id = "pass")
     private WebElement campoPassword;
@@ -23,11 +23,9 @@ public class LoginPage extends BaseTests {
 
     @FindBy(xpath = "//span[@data-bind='text: customer().fullname'][ contains (text(),'Juan Pablo Leal')]")
     private WebElement loginCorrecto;
-    @FindBy(xpath = "//div[@id='email-error'][contains (text(), 'Este es un campo obligatorio.')]")
-    private WebElement loginFallido;
 
-    @FindBy(xpath = "//div[contains (text(),'Se requieren nombre de usuario y contraseña.')]")
-    private WebElement seRequiereUserYpass;
+    @FindBy(css = ".customer-menu > .header.links > .authorization-link > a")
+    private WebElement usuarioCorrecto;
 
 
     public LoginPage(WebDriver driver) {
@@ -45,10 +43,6 @@ public class LoginPage extends BaseTests {
 
     public boolean ok() {
         return loginCorrecto.isDisplayed();
-    }
-
-    public boolean fail() {
-        return loginFallido.isDisplayed() || seRequiereUserYpass.isDisplayed();
     }
 }
 

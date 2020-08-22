@@ -11,9 +11,6 @@ public class AudioMusicaTests extends BaseTests{
 
         String nombreProducto = "Piano";
 
-        loginPage.Login("", "");
-        Assert.assertTrue(loginPage.fail());
-
         loginPage.Login("jpleal79@hotmail.com", "serrano832");
         Assert.assertTrue(loginPage.ok());
 
