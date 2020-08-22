@@ -13,13 +13,11 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTests {
 
-
     public WebDriver driver;
     public String url = "https://www.audiomusica.com/";
     public HomePage homePage;
     public LoginPage loginPage;
     public FiltrarPage filtrarPage;
-
 
     @BeforeMethod
     @Parameters("browser")
@@ -28,13 +26,10 @@ public class BaseTests {
         switch (browser) {
 
             case "chrome":
-
-                //instrucciones para arrancar el browser
                 ChromeOptions opts = new ChromeOptions();
                 opts.addArguments("--disable-notifications"); //Opción de Chrome sirve para desactivar notificacion
                 opts.addArguments("--start-maximized"); //Opción de Chrome sirve para que inicie maximizado
 
-                
                 System.setProperty("webdriver.chrome.driver", "./src/test/resources/webdrivers/chromedriver.exe");
                 driver = new ChromeDriver(opts);
                 loginPage = new LoginPage(driver);
@@ -57,8 +52,6 @@ public class BaseTests {
         driver.get(url);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-
     }
 
     @AfterMethod
@@ -66,7 +59,6 @@ public class BaseTests {
         if (driver != null)
             driver.quit();
     }
-
 }
 
 
