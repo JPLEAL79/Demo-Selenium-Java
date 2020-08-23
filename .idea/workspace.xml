@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4de3d59f-dc89-4d4c-94ca-46955cc566d9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/PropertiesFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Demo-Selenium-Java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AudioMusicaTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AudioMusicaTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/PropertiesFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/PropertiesFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/Demo-Selenium-Java.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/AudioMusicaTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/AudioMusicaTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/BaseTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/BaseTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,22 +48,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1gT4P9xzeQMRbRMKasr4hqqg9G6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demoCucumber" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -97,6 +127,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AudioMusicaTests.testBuscarArticulo (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Demo-Selenium-Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.AudioMusicaTests" />
+      <option name="METHOD_NAME" value="testBuscarArticulo" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AudioMusicaTests.testBuscarArticulo" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="demoAutomation" />
       <extension name="coverage">
@@ -141,10 +190,12 @@
       <item itemvalue="TestNG.AudioMusicaTests.testBuscarArticulo" />
       <item itemvalue="TestNG.AudioMusicaTests (1)" />
       <item itemvalue="TestNG.C:/Users/jplea/repoJP/Demo-Selenium-Java/testng.xml" />
+      <item itemvalue="TestNG.AudioMusicaTests.testBuscarArticulo (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/jplea/repoJP/Demo-Selenium-Java/testng.xml" />
+        <item itemvalue="TestNG.AudioMusicaTests.testBuscarArticulo (1)" />
         <item itemvalue="TestNG.AudioMusicaTests (1)" />
         <item itemvalue="TestNG.AudioMusicaTests.testBuscarArticulo" />
         <item itemvalue="TestNG.AudioMusicaTests" />
@@ -161,10 +212,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559000363151</updated>
+      <workItem from="1598138020294" duration="2727000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="256" y="73" key="#Project_Structure" timestamp="1598138040391">
+      <screen x="0" y="23" width="1536" height="937" />
+    </state>
+    <state x="256" y="73" key="#Project_Structure/0.23.1536.937@0.23.1536.937" timestamp="1598138040391" />
     <state x="407" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598134845230">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -173,97 +243,73 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598136163221" />
-    <state width="1323" height="215" key="GridCell.Tab.0.bottom" timestamp="1598126403530">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1340" y="362" key="#xdebugger.evaluate" timestamp="1598140377876">
+      <screen x="0" y="23" width="2048" height="1257" />
+    </state>
+    <state x="1340" y="362" key="#xdebugger.evaluate/0.23.2048.1257@0.23.2048.1257" timestamp="1598140377876" />
+    <state width="900" height="310" key="GridCell.Tab.0.bottom" timestamp="1598140824983">
+      <screen x="0" y="23" width="2048" height="1257" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598126403530" />
-    <state width="1323" height="215" key="GridCell.Tab.0.center" timestamp="1598126403530">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1494" height="310" key="GridCell.Tab.0.bottom/0.23.1536.937@0.23.1536.937" timestamp="1598140199825" />
+    <state width="900" height="310" key="GridCell.Tab.0.bottom/0.23.2048.1257@0.23.2048.1257" timestamp="1598140824983" />
+    <state width="900" height="310" key="GridCell.Tab.0.center" timestamp="1598140824982">
+      <screen x="0" y="23" width="2048" height="1257" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598126403530" />
-    <state width="1323" height="215" key="GridCell.Tab.0.left" timestamp="1598126403530">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1494" height="310" key="GridCell.Tab.0.center/0.23.1536.937@0.23.1536.937" timestamp="1598140199824" />
+    <state width="900" height="310" key="GridCell.Tab.0.center/0.23.2048.1257@0.23.2048.1257" timestamp="1598140824982" />
+    <state width="900" height="310" key="GridCell.Tab.0.left" timestamp="1598140824982">
+      <screen x="0" y="23" width="2048" height="1257" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598126403530" />
-    <state width="1323" height="215" key="GridCell.Tab.0.right" timestamp="1598126403530">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1494" height="310" key="GridCell.Tab.0.left/0.23.1536.937@0.23.1536.937" timestamp="1598140199824" />
+    <state width="900" height="310" key="GridCell.Tab.0.left/0.23.2048.1257@0.23.2048.1257" timestamp="1598140824982" />
+    <state width="900" height="310" key="GridCell.Tab.0.right" timestamp="1598140824983">
+      <screen x="0" y="23" width="2048" height="1257" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598126403530" />
+    <state width="1494" height="310" key="GridCell.Tab.0.right/0.23.1536.937@0.23.1536.937" timestamp="1598140199825" />
+    <state width="900" height="310" key="GridCell.Tab.0.right/0.23.2048.1257@0.23.2048.1257" timestamp="1598140824983" />
+    <state width="900" height="310" key="GridCell.Tab.1.bottom" timestamp="1598140824984">
+      <screen x="0" y="23" width="2048" height="1257" />
+    </state>
+    <state width="1494" height="310" key="GridCell.Tab.1.bottom/0.23.1536.937@0.23.1536.937" timestamp="1598140200742" />
+    <state width="900" height="310" key="GridCell.Tab.1.bottom/0.23.2048.1257@0.23.2048.1257" timestamp="1598140824984" />
+    <state width="900" height="310" key="GridCell.Tab.1.center" timestamp="1598140824983">
+      <screen x="0" y="23" width="2048" height="1257" />
+    </state>
+    <state width="1494" height="310" key="GridCell.Tab.1.center/0.23.1536.937@0.23.1536.937" timestamp="1598140200742" />
+    <state width="900" height="310" key="GridCell.Tab.1.center/0.23.2048.1257@0.23.2048.1257" timestamp="1598140824983" />
+    <state width="900" height="310" key="GridCell.Tab.1.left" timestamp="1598140824983">
+      <screen x="0" y="23" width="2048" height="1257" />
+    </state>
+    <state width="1494" height="310" key="GridCell.Tab.1.left/0.23.1536.937@0.23.1536.937" timestamp="1598140200742" />
+    <state width="900" height="310" key="GridCell.Tab.1.left/0.23.2048.1257@0.23.2048.1257" timestamp="1598140824983" />
+    <state width="900" height="310" key="GridCell.Tab.1.right" timestamp="1598140824983">
+      <screen x="0" y="23" width="2048" height="1257" />
+    </state>
+    <state width="1494" height="310" key="GridCell.Tab.1.right/0.23.1536.937@0.23.1536.937" timestamp="1598140200742" />
+    <state width="900" height="310" key="GridCell.Tab.1.right/0.23.2048.1257@0.23.2048.1257" timestamp="1598140824983" />
+    <state x="1242" y="308" width="670" height="676" key="search.everywhere.popup" timestamp="1598140869067">
+      <screen x="0" y="23" width="2048" height="1257" />
+    </state>
+    <state x="1242" y="308" width="670" height="676" key="search.everywhere.popup/0.23.2048.1257@0.23.2048.1257" timestamp="1598140869067" />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>demoAutomation</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: com.beust:jcommander:1.48</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/BaseTests.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/AudioMusicaTests.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
