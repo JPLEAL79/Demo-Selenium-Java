@@ -13,7 +13,7 @@ import org.testng.annotations.*;
 import pages.FiltrarPage;
 import pages.HomePage;
 import pages.LoginPage;
-import utils.PropertiesFile;
+import utils.ConfigManager;
 
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -25,40 +25,16 @@ public class BaseTests {
     public HomePage homePage;
     public LoginPage loginPage;
     public FiltrarPage filtrarPage;
-    public static final String WINDOWS_DRIVER_PATH = "./src/test/java/resources/webdrivers/";
+    public static final String WINDOWS_DRIVER_PATH = "src/test/resources/webdrivers/";
     public static final String UNIX_DRIVER_PATH = "/usr/local/bin/";
     Properties props;
 
     @BeforeMethod
     @Parameters("browser")
     public void setUp(String browser) throws Exception {
-        props = PropertiesFile.readPropertiesFile();
+        props = ConfigManager.readPropertiesFile();
         driver = startBrowser(System.getProperty("os.name"), browser);
-//        switch (browser) {
-//
-//            case "chrome":
-//                ChromeOptions opts = new ChromeOptions();
-//                opts.addArguments("--disable-notifications"); //Opción de Chrome sirve para desactivar notificacion
-//                opts.addArguments("--start-maximized"); //Opción de Chrome sirve para que inicie maximizado
-//
-//                System.setProperty("webdriver.chrome.driver", "./src/test/resources/webdrivers/chromedriver.exe");
-//                driver = new ChromeDriver(opts);
-//                loginPage = new LoginPage(driver);
-//                homePage = new HomePage(driver);
-//                filtrarPage = new FiltrarPage(driver);
-//                break;
-//
-//            case "firefox":
-//                System.setProperty("webdriver.gecko.driver", "./src/test/resources/webdrivers/geckodriver.exe");
-//                driver = new FirefoxDriver();
-//                loginPage = new LoginPage(driver);
-//                homePage = new HomePage(driver);
-//                filtrarPage = new FiltrarPage(driver);
-//                break;
-//            default:
-//                throw new Exception("Navegador" + browser + "no soportado");
-//
-//        }
+
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
         filtrarPage = new FiltrarPage(driver);
@@ -91,7 +67,7 @@ public class BaseTests {
 
         if (BrowserType.FIREFOX.contains(browserName)) {
             execName = "geckodriver";
-            System.setProperty(FirefoxDriver.SystemProperty.DRIVER_XPI_PROPERTY, basePath + execName + fileExt);
+            System.setProperty("webdriver.gecko.driver", basePath + execName + fileExt);
             return new FirefoxDriver();
         } else if (BrowserType.SAFARI.contains(browserName)) {
             execName = "safaridriver";

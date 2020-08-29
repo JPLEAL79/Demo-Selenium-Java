@@ -11,7 +11,8 @@ public class AudioMusicaTests extends BaseTests{
 
         String nombreProducto = "Piano";
 
-        loginPage.Login(getProperty("emptyPassword"), getProperty("password"));
+        loginPage.Login(getProperty("emailVacio"),getProperty("passVacio"));
+        loginPage.Login(getProperty("email"), getProperty("pass"));
         //Assert.assertTrue(loginPage.ok());
 
         homePage.buscarEnCajaDeTexto(nombreProducto);

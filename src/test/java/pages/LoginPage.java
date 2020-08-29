@@ -20,11 +20,7 @@ public class LoginPage extends BaseTests {
     private WebElement campoPassword;
     @FindBy(id = "send2")
     private WebElement loginButton;
-
-    @FindBy(xpath = "//span[@data-bind='text: customer().fullname'][ contains (text(),'Juan Pablo Leal')]")
-    private WebElement loginCorrecto;
-
-    @FindBy(css = ".customer-menu > .header.links > .authorization-link > a")
+    @FindBy(xpath ="//*[@class='customer-menu']//a[contains(text(),'Cerrar sesión')]")
     private WebElement usuarioCorrecto;
 
 
@@ -42,7 +38,7 @@ public class LoginPage extends BaseTests {
     }
 
     public boolean ok() {
-        return loginCorrecto.isDisplayed();
+        return usuarioCorrecto.isDisplayed();
     }
 }
 

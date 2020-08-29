@@ -21,8 +21,6 @@ public class HomePage {
         wait = new WebDriverWait(driver, 15);
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
-        PageFactory.initElements(this.driver, this);
-
     }
 
     public void buscarEnCajaDeTexto(String nombreProducto){
