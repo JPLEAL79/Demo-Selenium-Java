@@ -18,11 +18,8 @@ public class AudioMusicaTests extends BaseTests{
         homePage.buscarEnCajaDeTexto(nombreProducto);
         Assert.assertTrue(homePage.at());
 
-        filtrarPage.CategoríaMarca();
-        Assert.assertTrue(filtrarPage.linkMarcaDisponible());
-
-        filtrarPage.obtenerDatosDeListaDeMarcas();
-        //Assert.assertTrue(filtrarPage.at());
+        filtrarPage.obtenerListadoDeMarcas();
+        Assert.assertTrue(filtrarPage.at());
 
     }
 }

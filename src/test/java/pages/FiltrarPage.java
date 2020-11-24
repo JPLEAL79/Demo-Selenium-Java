@@ -13,13 +13,13 @@ public class FiltrarPage {
     WebDriver driver;
     private WebDriverWait wait;
 
-    @FindBy(xpath = "//div[@id='narrow-by-list']/div[2]")
-    private WebElement linkMarca;
-    @FindBy(xpath = "//*[@data-amshopby-filter='attr_manufacturer']/li")
+    @FindBy(xpath = "//*[@id='kuFilterNames-manufacturer']/ul/li")
     private List<WebElement> listaDeMarcas;
 
-    @FindBy(xpath = "//li[@class='item am-shopby-item']")
-    private WebElement resultado;
+    @FindBy (xpath =  "//*[@id='kuFilterNames-manufacturer']")
+    private WebElement marcas;
+
+
 
     public FiltrarPage(WebDriver driver) {
         this.driver = driver;
@@ -28,11 +28,7 @@ public class FiltrarPage {
 
     }
 
-    public void CategoríaMarca() {
-        linkMarca.click();
-    }
-
-    public void obtenerDatosDeListaDeMarcas() {
+    public void obtenerListadoDeMarcas() {
         String nombreMarca = "";
 
         for (WebElement marca : listaDeMarcas) {
@@ -42,8 +38,9 @@ public class FiltrarPage {
         }
     }
 
-    public boolean linkMarcaDisponible() {
-        return linkMarca.isDisplayed();
+    public boolean at() {
+        return marcas.isDisplayed();
+
     }
 }
 

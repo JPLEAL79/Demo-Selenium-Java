@@ -14,7 +14,7 @@ public class LoginPage extends BaseTests {
 
     @FindBy(xpath = "//a[contains(text(),'Iniciar sesión')]")
     private WebElement clickIniciaSesion;
-    @FindBy(css = "input#email")
+    @FindBy(xpath = "//*[@id='email']")
     private WebElement campoEmail;
     @FindBy(id = "pass")
     private WebElement campoPassword;

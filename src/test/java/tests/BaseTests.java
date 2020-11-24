@@ -7,16 +7,19 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.*;
 import pages.FiltrarPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utils.ConfigManager;
-
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+
 
 public class BaseTests {
 
@@ -30,6 +33,7 @@ public class BaseTests {
     Properties props;
 
     @BeforeMethod
+
     @Parameters("browser")
     public void setUp(String browser) throws Exception {
         props = ConfigManager.readPropertiesFile();
@@ -65,24 +69,33 @@ public class BaseTests {
             basePath = UNIX_DRIVER_PATH;
         }
 
-        if (BrowserType.FIREFOX.contains(browserName)) {
+        if (BrowserType.FIREFOX.contains(browserName)) { 
             execName = "geckodriver";
             System.setProperty("webdriver.gecko.driver", basePath + execName + fileExt);
+            FirefoxOptions opts = new FirefoxOptions();
+            opts.addArguments("--disable-notifications");
+            opts.addArguments("--start-maximized");
             return new FirefoxDriver();
+
+
         } else if (BrowserType.SAFARI.contains(browserName)) {
             execName = "safaridriver";
             System.setProperty("webdriver.safari.driver", basePath + execName + fileExt);
             return new SafariDriver();
+
+
         } else if (BrowserType.EDGE.contains(browserName)) {
             execName = "msedgedriver";
             System.setProperty(EdgeDriverService.EDGE_DRIVER_EXE_PROPERTY, basePath + execName + fileExt);
             return new EdgeDriver();
+
+
         } else {
             execName = "chromedriver";
+            System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, basePath + execName + fileExt);
             ChromeOptions opts = new ChromeOptions();
             opts.addArguments("--disable-notifications"); //Opción de Chrome sirve para desactivar notificacion
             opts.addArguments("--start-maximized"); //Opción de Chrome sirve para que inicie maximizado
-            System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, basePath + execName + fileExt);
             return new ChromeDriver(opts);
         }
     }
