@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -9,6 +10,7 @@ import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.*;
@@ -16,6 +18,9 @@ import pages.FiltrarPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utils.ConfigManager;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -33,7 +38,7 @@ public class BaseTests {
     Properties props;
 
     @BeforeMethod
-
+    
     @Parameters("browser")
     public void setUp(String browser) throws Exception {
         props = ConfigManager.readPropertiesFile();
@@ -57,7 +62,7 @@ public class BaseTests {
         return (String) this.props.get(nombreProperty);
     }
 
-    private WebDriver startBrowser(String osName, String browserName) {
+    private WebDriver startBrowser(String osName, String browserName) throws MalformedURLException {
         String basePath = "";
         String fileExt = "";
         String execName = "";
@@ -75,7 +80,8 @@ public class BaseTests {
             FirefoxOptions opts = new FirefoxOptions();
             opts.addArguments("--disable-notifications");
             opts.addArguments("--start-maximized");
-            return new FirefoxDriver();
+
+            return new FirefoxDriver(opts);
 
 
         } else if (BrowserType.SAFARI.contains(browserName)) {
@@ -96,6 +102,11 @@ public class BaseTests {
             ChromeOptions opts = new ChromeOptions();
             opts.addArguments("--disable-notifications"); //Opción de Chrome sirve para desactivar notificacion
             opts.addArguments("--start-maximized"); //Opción de Chrome sirve para que inicie maximizado
+
+            // aca se creo la conexión  para docker
+            DesiredCapabilities dc = DesiredCapabilities.chrome();
+            URL url = new URL("http://localhost:4444/wd/hub");
+            RemoteWebDriver driver = new RemoteWebDriver(url, dc);
             return new ChromeDriver(opts);
         }
     }

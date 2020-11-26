@@ -9,6 +9,8 @@ public class AudioMusicaTests extends BaseTests{
     @Test
     public void testBuscarArticulo() {
 
+
+
         String nombreProducto = "Piano";
 
         loginPage.Login(getProperty("emailVacio"),getProperty("passVacio"));
