@@ -38,7 +38,7 @@ public class BaseTests {
     Properties props;
 
     @BeforeMethod
-    
+
     @Parameters("browser")
     public void setUp(String browser) throws Exception {
         props = ConfigManager.readPropertiesFile();
@@ -66,15 +66,14 @@ public class BaseTests {
         String basePath = "";
         String fileExt = "";
         String execName = "";
-        if(osName.startsWith("Windows")) {
+        if (osName.startsWith("Windows")) {
             basePath = WINDOWS_DRIVER_PATH;
             fileExt = ".exe";
-        }
-        else {
+        } else {
             basePath = UNIX_DRIVER_PATH;
         }
 
-        if (BrowserType.FIREFOX.contains(browserName)) { 
+        if (BrowserType.FIREFOX.contains(browserName)) {
             execName = "geckodriver";
             System.setProperty("webdriver.gecko.driver", basePath + execName + fileExt);
             FirefoxOptions opts = new FirefoxOptions();
@@ -102,12 +101,7 @@ public class BaseTests {
             ChromeOptions opts = new ChromeOptions();
             opts.addArguments("--disable-notifications"); //Opción de Chrome sirve para desactivar notificacion
             opts.addArguments("--start-maximized"); //Opción de Chrome sirve para que inicie maximizado
-
-            // aca se creo la conexión  para docker
-            DesiredCapabilities dc = DesiredCapabilities.chrome();
-            URL url = new URL("http://localhost:4444/wd/hub");
-            RemoteWebDriver driver = new RemoteWebDriver(url, dc);
-            return new ChromeDriver(opts);
+            return new ChromeDriver();
         }
     }
 }
