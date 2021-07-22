@@ -24,8 +24,6 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-
-
 public class BaseTests {
 
     public WebDriver driver;
@@ -38,7 +36,6 @@ public class BaseTests {
     Properties props;
 
     @BeforeMethod
-
     @Parameters("browser")
     public void setUp(String browser) throws Exception {
         props = ConfigManager.readPropertiesFile();

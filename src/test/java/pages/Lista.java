@@ -20,6 +20,6 @@ public class Lista {
 }
 
 /*
- *  getAttribute = para obtener el valor de un atributo
- *  Listas se pueden utilizar para li,
+ *  getAttribute = para obtener el valor de un atributo de un elemento web
+ *
  */
