@@ -1,4 +1,4 @@
 # Demo-Selenium-Java
-Este es un repositorio de automation Tienda: "AudioMusica"  
-Usando el patrón de diseño   Page Object y Page Factory     
-con el IDE Java Intellij Idea
+This is an automation repository Store: "AudioMusica"
+Using the Page Object and Page Factory design pattern
+with the Java Intellij Idea IDE
